@@ -1,0 +1,15 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.special import k1
+import time
+
+F_theory = 0.05005 
+F_d = np.linspace(0,0.1,10)
+y = []
+for i in F_d:
+    y = np.sqrt(i**2 - F_theory**2)
+
+plt.plot(F_d,y)
+plt.xlabel("Drive Force")
+plt.ylabel("Velocity")
+plt.show()
